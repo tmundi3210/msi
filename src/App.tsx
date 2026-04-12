@@ -3,6 +3,7 @@ import { DatabaseProvider } from './hooks/useDatabase';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
 import NodesPage from './pages/NodesPage';
+import CardsPage from './pages/CardsPage';
 import ReviewPage from './pages/ReviewPage';
 
 export default function App() {
@@ -13,6 +14,7 @@ export default function App() {
           <Route element={<Layout />}>
             <Route index element={<Dashboard />} />
             <Route path="nodes" element={<NodesPage />} />
+            <Route path="cards" element={<CardsPage />} />
             <Route path="review" element={<ReviewPage />} />
           </Route>
         </Routes>
