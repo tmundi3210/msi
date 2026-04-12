@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import { HashRouter, Routes, Route } from 'react-router-dom';
 import { DatabaseProvider } from './hooks/useDatabase';
 import Layout from './components/Layout';
 import Dashboard from './pages/Dashboard';
@@ -7,7 +7,7 @@ import ReviewPage from './pages/ReviewPage';
 
 export default function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <DatabaseProvider>
         <Routes>
           <Route element={<Layout />}>
@@ -17,6 +17,6 @@ export default function App() {
           </Route>
         </Routes>
       </DatabaseProvider>
-    </BrowserRouter>
+    </HashRouter>
   );
 }
