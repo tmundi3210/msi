@@ -16,7 +16,7 @@ export async function initDatabase(): Promise<SqlJsDatabase> {
   if (db) return db;
 
   const SQL = await initSqlJs({
-    locateFile: (file: string) => `https://sql.js.org/dist/${file}`,
+    locateFile: () => `${import.meta.env.BASE_URL}sql-wasm.wasm`,
   });
 
   // Try to restore from localStorage
