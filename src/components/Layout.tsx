@@ -55,6 +55,11 @@ export default function Layout() {
             </NavLink>
           </li>
           <li>
+            <NavLink to="/map" className={({ isActive }) => isActive ? 'active' : ''}>
+              <span>Mind Map</span>
+            </NavLink>
+          </li>
+          <li>
             <NavLink to="/review" className={({ isActive }) => isActive ? 'active' : ''}>
               <span>Review</span>
               {stats.dueNow > 0 && <span className="nav-badge">{stats.dueNow}</span>}
