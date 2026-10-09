@@ -10,8 +10,10 @@ export default defineConfig({
       '@': path.resolve(__dirname, './src'),
     },
   },
+  // sql.js ships CommonJS. Prebundling gives the dev server a default export.
+  // Excluding it serves sql-wasm-browser.js as native ESM and the app fails to load.
   optimizeDeps: {
-    exclude: ['sql.js'],
+    include: ['sql.js'],
   },
   server: {
     headers: {
